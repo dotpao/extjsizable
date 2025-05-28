@@ -20,7 +20,7 @@ module Extjsizable
         # }
 
         def to_extjs(options = {})
-          array_json_data = as_json(options)
+          array_json_data = self.as_json(options)
 
           if ::Array.dasherize_keys?
             array_json_data.map! { |h| dasherize_hash_keys(h) }

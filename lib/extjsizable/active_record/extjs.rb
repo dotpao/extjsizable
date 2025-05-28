@@ -46,7 +46,7 @@ module Extjsizable
           #    "success": true
           # }
 
-          h_json_data = as_json(options)
+          h_json_data = self.as_json(options)
           h_json_data = { :data => h_json_data } unless ::ActiveRecord::Base.include_root_in_json?
           h_json_data[h_json_data.keys.first] = wrap_hash_with_brackets(h_json_data.values.first, underscored_class_name) if ::ActiveRecord::Base.wrap_with_brackets?
 
